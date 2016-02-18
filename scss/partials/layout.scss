@@ -2,7 +2,19 @@
  * partials/wrapper
  * ---
  */
+html {
+  font-size: $rem-base;
+}
 
+body{
+	@include reset-box;
+}
+
+body{
+	font-size: $ft-size-medium;
+	color: $text-color;
+	background-color: $body-bg;
+}
 
 .wrapper {
   max-width: $wrapper-width;

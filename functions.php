@@ -94,13 +94,13 @@ function html5blank_header_scripts()
         if (HTML5_DEBUG) {
             // jQuery
             wp_deregister_script('jquery');
-            wp_register_script('jquery', get_template_directory_uri() . '/js/lib/jquery.js', array(), '1.11.1');
+            wp_register_script('jquery', get_template_directory_uri() . '/js/lib/jquery-1.12.0.min.js', array(), '1.12.1');
 
             // Conditionizr
             wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0');
 
             // Modernizr
-            wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr.js', array(), '2.8.3');
+            wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1');
 
             // Custom scripts
             wp_register_script(
@@ -477,4 +477,48 @@ function html5_shortcode_demo($atts, $content = null)
 function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 {
     return '<h2>' . $content . '</h2>';
+}
+
+class mono_walker extends Walker_Nav_Menu{
+ function start_el(&$output, $item, $depth, $args){
+  global $wp_query;
+  $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+  $class_names = $value = '';
+  $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+  
+  $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+  $class_names = ' class="'. esc_attr( $class_names ) . '"';
+  
+  $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+  
+  $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+  $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+  $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+  
+  if($item->xfn !== "nofollow") {
+    $path = $item->url;
+  }else{
+    $parsedURL = parse_url( esc_attr( $item->url ));
+    $cleanURL = substr_replace($parsedURL['path'],'',-1);//remove last '/';
+
+    $pathTab = explode('/',$cleanURL);
+    $pathTab[sizeof($pathTab)-1] = '#'.$pathTab[sizeof($pathTab)-1];
+    $path = implode('/',$pathTab );
+  }
+  
+  $attributes .= ! empty( $item->url )        ? ' href="'   . $path .'"' : '';
+  $attributes .= ! empty( $item->url )        ? ' data-title="'   .   sanitize_title($item->title) .'"' : '';
+  $description  = ! empty( $item->description ) ? '<span>'.esc_attr( $item->description ).'</span>' : '';
+  
+  if($depth != 0) $description = "";
+  
+  $item_output = $args->before;
+  $item_output .= '<a'. $attributes .'>';
+  $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
+  $item_output .= $description.$args->link_after;
+  $item_output .= '</a>';
+  $item_output .= $args->after;
+  
+  $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+ }
 }
