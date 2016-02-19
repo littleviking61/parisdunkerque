@@ -8,22 +8,22 @@
  * Typography
  */
 
-$font-family-base: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
-$font-family-title: 'Poiret One', sans-serif;
+$font-family-base: "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-title: "Berthold", sans-serif;
 $font-size-base: 140%;
 $line-height-base: 1.5;
 
 // font size
-$ft-size-smallest: rem-calc(8);
-$ft-size-small: rem-calc(10);
-$ft-size-normal: rem-calc(12);
-$ft-size-medium: rem-calc(14);
-$ft-size-large: rem-calc(16);
-$ft-size-larger: rem-calc(18);
-$ft-size-largest: rem-calc(22);
-$ft-size-big: rem-calc(30);
-$ft-size-hudge: rem-calc(40);
-$ft-size-super-hudge: rem-calc(50);
+$ft-size-smallest: rem-calc(10);
+$ft-size-small: rem-calc(12);
+$ft-size-normal: rem-calc(14);
+$ft-size-medium: rem-calc(16);
+$ft-size-large: rem-calc(18);
+$ft-size-larger: rem-calc(22);
+$ft-size-largest: rem-calc(26);
+$ft-size-big: rem-calc(32);
+$ft-size-hudge: rem-calc(46);
+$ft-size-super-hudge: rem-calc(52);
 
 /**
  * Colors
@@ -35,13 +35,15 @@ $selection-bg: #04A4CC;
 $text-color-light: #737373;
 
 $grey: #dddddd;
+$primary: #f3b112;
+$primary-text-color: white;
 
 
 /**
  * Grid
  */
 
-$wrapper-width: 1280px;
+$wrapper-width: rem-calc(960);
 
 // size
 $one: rem-calc(1);

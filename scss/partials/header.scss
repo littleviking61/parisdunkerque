@@ -5,9 +5,65 @@
 
 
 // Header container
-.header {}
+.header {
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	background-color: white;
+	margin: $gutter-big 0 $gutter 0;
 
-// Logo
-.logo {}
+	.site-title, .site-description{
+		display: none;
+	}
 
-.logo-img {}
+	.logo-img{
+		position: absolute;
+		left: - rem-calc(210);
+		top: - rem-calc(20);
+	}
+
+	.logo-description{
+		padding-top: $gutter-small;
+		margin-left: - $gutter-small;
+	}
+}
+
+/**
+ * partials/nav
+ * ---
+ * Menus
+ */
+
+.nav {
+	.menu{
+		padding-left: 0;
+		font-family: $font-family-title;
+		font-size: $ft-size-large;
+		font-weight: bold;
+		margin: $gutter-small 0;
+
+		li{
+			display: inline-block;
+			list-style: none;
+
+			a{
+				@include single-transition(background-color, 0.4s);
+				display: block;
+				background-color: $primary;
+				color: $primary-text-color;
+				padding: $gutter-small $gutter;
+				margin-bottom: $gutter-small;
+				text-transform: uppercase;
+
+				&:hover{
+					background-color: black;
+				}
+			}
+
+			&.current-menu-item a{
+				background-color: black;
+			}
+		}
+	}
+}
+

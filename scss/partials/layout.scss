@@ -4,6 +4,8 @@
  */
 html {
   font-size: $rem-base;
+  margin: 0;
+  padding: 0;
 }
 
 body{
@@ -13,12 +15,24 @@ body{
 body{
 	font-size: $ft-size-medium;
 	color: $text-color;
-	background-color: $body-bg;
 }
 
 .wrapper {
   max-width: $wrapper-width;
-  padding: 0 $margin-horizontal-large;
+  padding: 0 0 0 rem-calc(140);
   margin: 0 auto;
   position: relative;
+
+	background-color: $body-bg;
+	background-image: url(../img/damier.png);
+	background-repeat: repeat-y;
+	min-height: 100vh;
+}
+
+main{
+	padding-top: rem-calc(200);
+}
+
+footer{
+	overflow: hidden;
 }

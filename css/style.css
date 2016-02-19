@@ -24,6 +24,15 @@
  * ---
  * Declare fonts here
  */
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300);
+@font-face {
+  font-family: "Berthold";
+  src: url("../fonts/berthold_akzidenz_grotesk_be_bold-webfont.eot");
+  src: url("../fonts/berthold_akzidenz_grotesk_be_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/berthold_akzidenz_grotesk_be_bold-webfont.woff") format("woff"), url("../fonts/berthold_akzidenz_grotesk_be_bold-webfont.ttf") format("truetype"), url("../fonts/berthold_akzidenz_grotesk_be_bold-webfont.svg#Berthold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
 /*
 @font-face {
   font-family: "Font-Name";
@@ -66,7 +75,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 140%;
   line-height: 1.5;
   color: black;
@@ -159,32 +168,92 @@ input[type="search"] {
  * ---
  */
 html {
-  font-size: 16px; }
+  font-size: 16px;
+  margin: 0;
+  padding: 0; }
 
 body {
   padding: 0;
   margin: 0; }
 
 body {
-  font-size: 0.875rem;
-  color: black;
-  background-color: white; }
+  font-size: 1rem;
+  color: black; }
 
 .wrapper {
-  max-width: 1280px;
-  padding: 0 0.9375rem;
+  max-width: 60rem;
+  padding: 0 0 0 8.75rem;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  background-color: white;
+  background-image: url(../img/damier.png);
+  background-repeat: repeat-y; }
+
+main {
+  padding-top: 12.5rem; }
+
+footer {
+  overflow: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Berthold", sans-serif; }
+
+h2 {
+  font-weight: 500; }
+
+a:hover, a:focus {
+  text-decoration: none; }
 
 /**
  * partials/header
  * ---
  */
+.header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  background-color: white;
+  margin: 1.875rem 0 0.625rem 0; }
+  .header .site-title, .header .site-description {
+    display: none; }
+  .header .logo-img {
+    position: absolute;
+    left: -13.125rem;
+    top: -1.25rem; }
+  .header .logo-description {
+    padding-top: 0.3125rem;
+    margin-left: -0.3125rem; }
+
 /**
  * partials/nav
  * ---
  * Menus
  */
+.nav .menu {
+  padding-left: 0;
+  font-family: "Berthold", sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 0.3125rem 0; }
+  .nav .menu li {
+    display: inline-block;
+    list-style: none; }
+    .nav .menu li a {
+      -moz-transition: background-color 0.4s;
+      -o-transition: background-color 0.4s;
+      -webkit-transition: background-color 0.4s;
+      transition: background-color 0.4s;
+      display: block;
+      background-color: #f3b112;
+      color: white;
+      padding: 0.3125rem 0.625rem;
+      margin-bottom: 0.3125rem;
+      text-transform: uppercase; }
+      .nav .menu li a:hover {
+        background-color: black; }
+    .nav .menu li.current-menu-item a {
+      background-color: black; }
+
 /**
  * partials/sidebar
  * ---

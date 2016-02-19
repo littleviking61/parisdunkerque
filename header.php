@@ -33,10 +33,15 @@
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo-simple.png" alt="Logo" class="logo-img">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/banner.svg" alt="description" class="logo-description">
 						</a>
 					</div>
 					<!-- /logo -->
+					<div class="info">
+						<h1 class="site-title"><?= bloginfo('name') ?></h1>
+						<h2 class="site-description"><?= bloginfo('description') ?></h2>
+					</div>
 
 					<!-- nav -->
 					<nav class="nav" role="navigation">
