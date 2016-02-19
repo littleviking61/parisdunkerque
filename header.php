@@ -26,6 +26,12 @@
 		<!-- wrapper -->
 		<div class="wrapper">
 
+			<?php $url = get_post_meta($post->ID, 'video', true); ?>
+			<?php if(!empty($url)) : ?>
+				<div class="highlight">
+					<?php echo wp_oembed_get($url, ''); ?>
+				</div>
+			<?php endif ?>
 			<!-- header -->
 			<header class="header clear" role="banner">
 

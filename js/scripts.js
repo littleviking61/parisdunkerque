@@ -3,7 +3,11 @@
 
 	$(function () {
 		// DOM ready, take it away
-		$('main').fitVids();
+		$(document).fitVids();
+
+		var sticky = new Waypoint.Sticky({
+		  element: $('header.header')[0]
+		})
 
 		$('a[rel="nofollow"], li.top > a','.header nav').click(function(e){
 

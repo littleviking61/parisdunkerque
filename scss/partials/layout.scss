@@ -19,18 +19,15 @@ body{
 
 .wrapper {
   max-width: $wrapper-width;
-  padding: 0 0 0 rem-calc(140);
+  padding: 0 rem-calc(40) 0 rem-calc(160);
   margin: 0 auto;
   position: relative;
 
 	background-color: $body-bg;
 	background-image: url(../img/damier.png);
 	background-repeat: repeat-y;
+	background-position: rem-calc(50);
 	min-height: 100vh;
-}
-
-main{
-	padding-top: rem-calc(200);
 }
 
 footer{

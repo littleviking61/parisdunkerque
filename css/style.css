@@ -182,15 +182,14 @@ body {
 
 .wrapper {
   max-width: 60rem;
-  padding: 0 0 0 8.75rem;
+  padding: 0 2.5rem 0 10rem;
   margin: 0 auto;
   position: relative;
   background-color: white;
   background-image: url(../img/damier.png);
-  background-repeat: repeat-y; }
-
-main {
-  padding-top: 12.5rem; }
+  background-repeat: repeat-y;
+  background-position: 3.125rem;
+  min-height: 100vh; }
 
 footer {
   overflow: hidden; }
@@ -208,21 +207,30 @@ a:hover, a:focus {
  * partials/header
  * ---
  */
+.highlight {
+  padding-top: 2.5rem;
+  padding-bottom: 0.625rem; }
+
 .header {
-  position: fixed;
+  position: relative;
   z-index: 5;
   width: 100%;
   background-color: white;
-  margin: 1.875rem 0 0.625rem 0; }
+  padding: 1.25rem 0 0 0; }
+  .header.stuck {
+    position: fixed;
+    top: 0; }
   .header .site-title, .header .site-description {
     display: none; }
   .header .logo-img {
     position: absolute;
-    left: -13.125rem;
-    top: -1.25rem; }
+    top: 0.625rem;
+    height: 8.75rem;
+    left: -9.375rem; }
   .header .logo-description {
-    padding-top: 0.3125rem;
-    margin-left: -0.3125rem; }
+    margin-left: -0.3125rem;
+    height: 4.375rem;
+    margin-top: 0.3125rem; }
 
 /**
  * partials/nav
@@ -232,7 +240,7 @@ a:hover, a:focus {
 .nav .menu {
   padding-left: 0;
   font-family: "Berthold", sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: bold;
   margin: 0.3125rem 0; }
   .nav .menu li {

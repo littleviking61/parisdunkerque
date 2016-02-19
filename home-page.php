@@ -1,5 +1,6 @@
 <?php while(have_posts()) : the_post(); ?>
-	<h2 class=”post-title”><?php the_title(); ?></h2>
-	<div class=”post-content”><?php the_content(); ?></div>
-	<?php edit_post_link(); ?>
+	<div class=”post-content”>
+		<?php the_content(); ?>
+		<div class="edit"><small><?php edit_post_link(); ?></small></div>
+	</div>
 <?php endwhile; ?>

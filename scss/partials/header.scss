@@ -3,14 +3,23 @@
  * ---
  */
 
+.highlight{
+	padding-top: $gutter-hudge;
+	padding-bottom: $gutter;
+}
 
 // Header container
 .header {
-	position: fixed;
+	position: relative;
 	z-index: 5;
 	width: 100%;
 	background-color: white;
-	margin: $gutter-big 0 $gutter 0;
+	padding: $gutter-large 0 0 0;
+
+	&.stuck{
+		position: fixed;
+		top: 0;
+	}
 
 	.site-title, .site-description{
 		display: none;
@@ -18,13 +27,15 @@
 
 	.logo-img{
 		position: absolute;
-		left: - rem-calc(210);
-		top: - rem-calc(20);
+		top: $gutter;
+		height: rem-calc(140);
+		left: - rem-calc(150);
 	}
 
 	.logo-description{
-		padding-top: $gutter-small;
 		margin-left: - $gutter-small;
+    height: rem-calc(70);
+    margin-top: $gutter-small;
 	}
 }
 
@@ -38,7 +49,7 @@
 	.menu{
 		padding-left: 0;
 		font-family: $font-family-title;
-		font-size: $ft-size-large;
+		font-size: $ft-size-normal;
 		font-weight: bold;
 		margin: $gutter-small 0;
 
