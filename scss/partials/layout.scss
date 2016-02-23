@@ -15,6 +15,7 @@ body{
 body{
 	font-size: $ft-size-medium;
 	color: $text-color;
+	background-image: url(../img/concrete_seamless.png);	
 }
 
 .wrapper {
@@ -23,7 +24,7 @@ body{
   margin: 0 auto;
   position: relative;
 
-	background-color: $body-bg;
+	//background-color: $body-bg;
 	background-image: url(../img/damier.png);
 	background-repeat: repeat-y;
 	background-position: rem-calc(50);

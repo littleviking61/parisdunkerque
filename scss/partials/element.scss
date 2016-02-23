@@ -10,3 +10,16 @@ h2{
 a:hover, a:focus{
 	text-decoration: none;
 }	
+
+.button, %button{
+	display: inline-block;
+	padding: $gutter-small $gutter;
+	background-color: $primary;
+	color: $primary-text-color;
+	font-size: $ft-size-small;
+}
+.sh-link{
+	a{
+		@extend %button;
+	}
+}

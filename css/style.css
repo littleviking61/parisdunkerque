@@ -178,14 +178,14 @@ body {
 
 body {
   font-size: 1rem;
-  color: black; }
+  color: black;
+  background-image: url(../img/concrete_seamless.png); }
 
 .wrapper {
   max-width: 60rem;
   padding: 0 2.5rem 0 10rem;
   margin: 0 auto;
   position: relative;
-  background-color: white;
   background-image: url(../img/damier.png);
   background-repeat: repeat-y;
   background-position: 3.125rem;
@@ -203,6 +203,13 @@ h2 {
 a:hover, a:focus {
   text-decoration: none; }
 
+.button, .sh-link a {
+  display: inline-block;
+  padding: 0.3125rem 0.625rem;
+  background-color: #f3b112;
+  color: white;
+  font-size: 0.75rem; }
+
 /**
  * partials/header
  * ---
@@ -215,11 +222,13 @@ a:hover, a:focus {
   position: relative;
   z-index: 5;
   width: 100%;
-  background-color: white;
+  background-image: url(../img/concrete_seamless.png);
   padding: 1.25rem 0 0 0; }
   .header.stuck {
     position: fixed;
-    top: 0; }
+    top: 0;
+    width: 47.5rem;
+    max-width: calc(100% - 12.5rem); }
   .header .site-title, .header .site-description {
     display: none; }
   .header .logo-img {
@@ -228,7 +237,7 @@ a:hover, a:focus {
     height: 8.75rem;
     left: -9.375rem; }
   .header .logo-description {
-    margin-left: -0.3125rem;
+    margin-left: -0.25rem;
     height: 4.375rem;
     margin-top: 0.3125rem; }
 
