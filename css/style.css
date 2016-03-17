@@ -49,6 +49,8 @@
  * modules/variables
  * ---
  */
+/* VGT */
+/* PDK */
 /**
  * Typography
  */
@@ -180,14 +182,14 @@ body {
 body {
   font-size: 1rem;
   color: black;
-  background-image: url(../img/concrete_seamless.png); }
+  background-image: url(../img/bg-vgt.png); }
 
 .wrapper {
   max-width: 60rem;
   padding: 0 2.5rem 0 10rem;
   margin: 0 auto;
   position: relative;
-  background-image: url(../img/damier.png);
+  background-image: url(../img/damier-vgt.png);
   background-repeat: repeat-y;
   background-position: 3.125rem;
   min-height: 100vh; }
@@ -228,7 +230,7 @@ a {
 .button {
   display: inline-block;
   padding: 0.3125rem 0.625rem;
-  background-color: #f3b112;
+  background-color: #9CB21B;
   color: white;
   font-size: 0.75rem; }
 
@@ -255,7 +257,7 @@ a.ext-link:after {
   position: relative;
   z-index: 5;
   width: 100%;
-  background-image: url(../img/concrete_seamless.png);
+  background-image: url(../img/bg-vgt.png);
   padding: 1.25rem 0 0 0; }
   .header.stuck {
     position: fixed;
@@ -267,8 +269,9 @@ a.ext-link:after {
   .header .logo-img {
     position: absolute;
     top: 0.625rem;
-    height: 8.75rem;
-    left: -9.375rem; }
+    height: 11.25rem;
+    left: -10.3125rem;
+    top: -1.25rem; }
   .header .logo-description {
     margin-left: -0.25rem;
     height: 4.375rem;
@@ -294,7 +297,7 @@ a.ext-link:after {
       -webkit-transition: background-color 0.4s;
       transition: background-color 0.4s;
       display: block;
-      background-color: #f3b112;
+      background-color: #9CB21B;
       color: white;
       padding: 0.3125rem 0.625rem;
       margin-bottom: 0.3125rem;

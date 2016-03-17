@@ -3,6 +3,23 @@
  * ---
  */
 
+/* VGT */
+
+$bg : url(../img/bg-vgt.png);
+$damier : url(../img/damier-vgt.png);
+$primary: #9CB21B; //vgt
+$logo-height: rem-calc(180);
+$logo-left: - rem-calc(165);
+$logo-top: - rem-calc(20);
+
+/* PDK */
+
+// $bg : url(../img/bg-pdk.png);
+// $damier : url(../img/damier-pdk.png);
+// $primary: #f3b112;
+// $logo-height: rem-calc(140);
+// $logo-left: - rem-calc(150);
+// $logo-top: rem-calc(10);
 
 /**
  * Typography
@@ -35,7 +52,6 @@ $selection-bg: #04A4CC;
 $text-color-light: #737373;
 
 $grey: #dddddd;
-$primary: #f3b112;
 $primary-text-color: white;
 
 

@@ -15,7 +15,7 @@
 	position: relative;
 	z-index: 5;
 	width: 100%;
-	background-image: url(../img/concrete_seamless.png);
+	background-image: $bg;
 	padding: $gutter-large 0 0 0;
 
 	&.stuck{
@@ -23,7 +23,6 @@
 		top: 0;
 		width: $wrapper-width - rem-calc(200);
 		max-width: calc(100% - #{rem-calc(200)});
-
 	}
 
 	.site-title, .site-description{
@@ -33,8 +32,9 @@
 	.logo-img{
 		position: absolute;
 		top: $gutter;
-		height: rem-calc(140);
-		left: - rem-calc(150);
+		height: $logo-height;
+		left: $logo-left;
+		top: $logo-top;
 	}
 
 	.logo-description{

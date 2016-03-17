@@ -15,7 +15,7 @@ body{
 body{
 	font-size: $ft-size-medium;
 	color: $text-color;
-	background-image: url(../img/concrete_seamless.png);	
+	background-image: $bg;	
 }
 
 .wrapper {
@@ -34,7 +34,7 @@ body{
   // }
 
 	//background-color: $body-bg;
-	background-image: url(../img/damier.png);
+	background-image: $damier;
 	background-repeat: repeat-y;
 	background-position: rem-calc(50);
 	min-height: 100vh;

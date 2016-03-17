@@ -74,7 +74,7 @@ module.exports = function(grunt) {
                     // dest: "/var/www/html/laventurierviking/wp-content/themes/dw-timeline-pro/assets/css/",
 
                     src: "./css",
-                    dest: "/var/www/html/client/pdk/wp-content/themes/cocoricotheme",
+                    dest: "/var/www/html/client/pdk/wp-content/themes/vgt",
                     host: "laventurier@onlinet",
                 }
             }
