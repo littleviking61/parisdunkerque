@@ -4,7 +4,9 @@
  */
 
 .highlight{
-	padding-top: $gutter-hudge;
+	&.video{
+		padding-top: $gutter-hudge;
+	}
 	padding-bottom: $gutter;
 }
 
@@ -69,14 +71,39 @@
 				margin-bottom: $gutter-small;
 				text-transform: uppercase;
 
-				&:hover{
+				&:hover, &.active{
 					background-color: black;
+				}
+
+				i{
+					padding-top: rem-calc(3);
+					padding-right: rem-calc(3);
 				}
 			}
 
 			&.current-menu-item a{
 				background-color: black;
 			}
+		}
+
+		.menu-item-has-children{
+			position: relative;
+
+			&:hover .sub-menu{
+				display: block;
+
+				li{
+					display: block;
+				}
+			}
+		}
+
+		.sub-menu{
+			display: none;
+	    position: absolute;
+	    left: 0;
+	    padding-left: 0;
+	    white-space: nowrap;
 		}
 	}
 }

@@ -15,7 +15,7 @@
 			</article>
 			<!-- /article -->
 
-		<?php endwhile; ?>
+			<?php endwhile; ?>
 
 		<?php else: ?>
 

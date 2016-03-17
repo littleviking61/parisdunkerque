@@ -24,11 +24,24 @@ body{
   margin: 0 auto;
   position: relative;
 
+  // &:before{
+  // 	content: '';
+  // 	position: absolute;
+  // 	top: 0;
+  // 	width: 100vw;
+  // 	height: 200px;
+  // 	background-image: url(../img/test.png);
+  // }
+
 	//background-color: $body-bg;
 	background-image: url(../img/damier.png);
 	background-repeat: repeat-y;
 	background-position: rem-calc(50);
 	min-height: 100vh;
+}
+
+.sidebar{
+	overflow: hidden;
 }
 
 footer{

@@ -11,8 +11,29 @@ p{
 	text-align: justify;
 }
 
-a:hover, a:focus{
-	text-decoration: none;
+a{
+	//font-weight: bold;
+	color: grey;
+	@include single-transition(color, 0.4s);
+	
+	&:hover{
+		color: black;
+	}
+
+	&.ext-link{
+		font-weight: normal;
+		text-decoration: none;
+		border-bottom: solid thin grey;
+		&:after{
+			@extend %fa;
+			content: "\f08e";
+			padding-left: $gutter-small;
+		}
+	}
+
+	&:hover, &:focus{
+		text-decoration: none;
+	}	
 }	
 
 .button, %button{
@@ -22,8 +43,18 @@ a:hover, a:focus{
 	color: $primary-text-color;
 	font-size: $ft-size-small;
 }
+
+%fa{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 .sh-link{
 	a{
-		@extend %button;
+		//@extend %button;
+		border-bottom: thin solid grey;
 	}
 }

@@ -4,14 +4,25 @@
 	$(function () {
 		// DOM ready, take it away
 		$(document).fitVids();
+		var header = $('header.header');
 
 		var sticky = new Waypoint.Sticky({
-		  element: $('header.header')[0]
+		  element: $(header)[0]
 		});
 
-		var header = $('header');
+		var waypoint = $("main > section[id]").waypoint({
+		  handler: function(direction) {
+		  	if(direction === 'up') {
+		  		$('nav a[href="/#'+this.element.id+'"]', header).removeClass('active');
+		  	}else{
+		  		$('nav a[href="/#'+this.element.id+'"]', header).addClass('active');
+		  	}
+		  },
+		  offset: '25%'
+		})
 
-		$('a[rel="nofollow"], li.top > a','.header nav').click(function(e){
+
+		$('nav a[rel="nofollow"], li.top > a',header).click(function(e){
 
 			if($('body').hasClass('home')) {
 				e.preventDefault();

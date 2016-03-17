@@ -15,7 +15,7 @@
         // conditionizr.com
         // configure environment tests
         conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
+            assets: '<?= get_template_directory_uri(); ?>',
             tests: {}
         });
         </script>
@@ -25,11 +25,17 @@
 
 		<!-- wrapper -->
 		<div class="wrapper">
-
-			<?php $url = get_post_meta($post->ID, 'video', true); ?>
-			<?php if(!empty($url)) : ?>
-				<div class="highlight">
-					<?php echo wp_oembed_get($url, ''); ?>
+		<?php 
+			$slideshow = get_post_meta($post->ID,'slideshow', true);
+			$url = get_post_meta($post->ID, 'video', true);
+			if(!empty($slideshow)) : ?>
+			<div class="highlight">
+				<?= do_shortcode('[smartslider3 slider='.$slideshow.']'); ?>
+			</div>
+			<?php 
+			elseif(!empty($url)) : ?>
+				<div class="highlight video">
+					<?= wp_oembed_get($url, ''); ?>
 				</div>
 			<?php endif ?>
 			<!-- header -->
@@ -37,10 +43,10 @@
 
 					<!-- logo -->
 					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
+						<a href="<?= home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo-simple.png" alt="Logo" class="logo-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/banner.svg" alt="description" class="logo-description">
+							<img src="<?= get_template_directory_uri(); ?>/img/logo-simple.png" alt="Logo" class="logo-img">
+							<img src="<?= get_template_directory_uri(); ?>/img/banner.svg" alt="description" class="logo-description">
 						</a>
 					</div>
 					<!-- /logo -->

@@ -83,7 +83,8 @@ body {
 
 img {
   max-width: 100%;
-  vertical-align: middle; }
+  vertical-align: middle;
+  height: auto; }
 
 a {
   color: black;
@@ -191,6 +192,9 @@ body {
   background-position: 3.125rem;
   min-height: 100vh; }
 
+.sidebar {
+  overflow: hidden; }
+
 footer {
   overflow: hidden; }
 
@@ -203,23 +207,49 @@ h2 {
 p {
   text-align: justify; }
 
-a:hover, a:focus {
-  text-decoration: none; }
+a {
+  color: grey;
+  -moz-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s; }
+  a:hover {
+    color: black; }
+  a.ext-link {
+    font-weight: normal;
+    text-decoration: none;
+    border-bottom: solid thin grey; }
+    a.ext-link:after {
+      content: "\f08e";
+      padding-left: 0.3125rem; }
+  a:hover, a:focus {
+    text-decoration: none; }
 
-.button, .sh-link a {
+.button {
   display: inline-block;
   padding: 0.3125rem 0.625rem;
   background-color: #f3b112;
   color: white;
   font-size: 0.75rem; }
 
+a.ext-link:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.sh-link a {
+  border-bottom: thin solid grey; }
+
 /**
  * partials/header
  * ---
  */
 .highlight {
-  padding-top: 2.5rem;
   padding-bottom: 0.625rem; }
+  .highlight.video {
+    padding-top: 2.5rem; }
 
 .header {
   position: relative;
@@ -269,10 +299,25 @@ a:hover, a:focus {
       padding: 0.3125rem 0.625rem;
       margin-bottom: 0.3125rem;
       text-transform: uppercase; }
-      .nav .menu li a:hover {
+      .nav .menu li a:hover, .nav .menu li a.active {
         background-color: black; }
+      .nav .menu li a i {
+        padding-top: 0.1875rem;
+        padding-right: 0.1875rem; }
     .nav .menu li.current-menu-item a {
       background-color: black; }
+  .nav .menu .menu-item-has-children {
+    position: relative; }
+    .nav .menu .menu-item-has-children:hover .sub-menu {
+      display: block; }
+      .nav .menu .menu-item-has-children:hover .sub-menu li {
+        display: block; }
+  .nav .menu .sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding-left: 0;
+    white-space: nowrap; }
 
 /**
  * partials/sidebar
