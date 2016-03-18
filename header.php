@@ -42,14 +42,16 @@
 			<header class="header clear" role="banner">
 
 					<!-- logo -->
-					<div class="logo">
-						<a href="<?= home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?= get_template_directory_uri(); ?>/img/logo-vgt.png" alt="Logo" class="logo-img">
-							<img src="<?= get_template_directory_uri(); ?>/img/banner-vgt.svg" alt="description" class="logo-description">
-						</a>
-					</div>
+					<a href="<?= home_url(); ?>" class="logo">
+						<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+						<img src="<?= get_template_directory_uri(); ?>/img/logo-cmt.png" alt="Logo" class="logo-img">
+						<img src="<?= get_template_directory_uri(); ?>/img/banner-cmt.svg" alt="description" class="logo-description">
+					</a>
 					<!-- /logo -->
+					<div class="sidebar-widget">
+						<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
+					</div>
+
 					<div class="info">
 						<h1 class="site-title"><?= bloginfo('name') ?></h1>
 						<h2 class="site-description"><?= bloginfo('description') ?></h2>

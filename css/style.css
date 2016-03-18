@@ -51,6 +51,7 @@
  */
 /* VGT */
 /* PDK */
+/* CMT */
 /**
  * Typography
  */
@@ -182,14 +183,14 @@ body {
 body {
   font-size: 1rem;
   color: black;
-  background-image: url(../img/bg-vgt.png); }
+  background-image: url(../img/bg-cmt.png); }
 
 .wrapper {
   max-width: 60rem;
   padding: 0 2.5rem 0 10rem;
   margin: 0 auto;
   position: relative;
-  background-image: url(../img/damier-vgt.png);
+  background-image: url(../img/damier-cmt.png);
   background-repeat: repeat-y;
   background-position: 3.125rem;
   min-height: 100vh; }
@@ -230,7 +231,7 @@ a {
 .button {
   display: inline-block;
   padding: 0.3125rem 0.625rem;
-  background-color: #9CB21B;
+  background-color: #F07E3B;
   color: white;
   font-size: 0.75rem; }
 
@@ -257,25 +258,38 @@ a.ext-link:after {
   position: relative;
   z-index: 5;
   width: 100%;
-  background-image: url(../img/bg-vgt.png);
+  background-image: url(../img/bg-cmt.png);
   padding: 1.25rem 0 0 0; }
   .header.stuck {
     position: fixed;
     top: 0;
     width: 47.5rem;
     max-width: calc(100% - 12.5rem); }
+  .header .logo {
+    display: inline-block; }
+    .header .logo .logo-img {
+      position: absolute;
+      top: 0.625rem;
+      height: 11.25rem;
+      left: -9.6875rem;
+      top: -0.625rem; }
+    .header .logo .logo-description {
+      height: 4.375rem;
+      margin-top: 0.3125rem; }
   .header .site-title, .header .site-description {
     display: none; }
-  .header .logo-img {
-    position: absolute;
-    top: 0.625rem;
-    height: 11.25rem;
-    left: -10.3125rem;
-    top: -1.25rem; }
-  .header .logo-description {
-    margin-left: -0.25rem;
-    height: 4.375rem;
-    margin-top: 0.3125rem; }
+  .header .sidebar-widget {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 0.625rem; }
+    .header .sidebar-widget ul {
+      padding: 0;
+      margin: 0; }
+    .header .sidebar-widget li {
+      list-style: none;
+      display: inline-block; }
+  .header nav {
+    clear: both; }
 
 /**
  * partials/nav
@@ -297,7 +311,7 @@ a.ext-link:after {
       -webkit-transition: background-color 0.4s;
       transition: background-color 0.4s;
       display: block;
-      background-color: #9CB21B;
+      background-color: #F07E3B;
       color: white;
       padding: 0.3125rem 0.625rem;
       margin-bottom: 0.3125rem;

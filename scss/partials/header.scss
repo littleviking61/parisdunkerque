@@ -25,22 +25,45 @@
 		max-width: calc(100% - #{rem-calc(200)});
 	}
 
+	.logo{
+		display: inline-block;
+
+		.logo-img{
+			position: absolute;
+			top: $gutter;
+			height: $logo-height;
+			left: $logo-left;
+			top: $logo-top;
+		}
+
+		.logo-description{
+			//margin-left: - rem-calc(4);
+	    height: rem-calc(70);
+	    margin-top: $gutter-small;
+		}
+	}
+
 	.site-title, .site-description{
 		display: none;
 	}
 
-	.logo-img{
-		position: absolute;
-		top: $gutter;
-		height: $logo-height;
-		left: $logo-left;
-		top: $logo-top;
+	.sidebar-widget{
+		display: inline-block;
+		vertical-align: bottom;
+		margin-bottom: $gutter;
+		
+		ul{
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			list-style: none;
+			display: inline-block;
+		}
 	}
 
-	.logo-description{
-		margin-left: - rem-calc(4);
-    height: rem-calc(70);
-    margin-top: $gutter-small;
+	nav{
+		clear: both;
 	}
 }
 

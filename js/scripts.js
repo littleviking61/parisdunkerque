@@ -13,9 +13,9 @@
 		var waypoint = $("main > section[id]").waypoint({
 		  handler: function(direction) {
 		  	if(direction === 'up') {
-		  		$('nav a[href="/#'+this.element.id+'"]', header).removeClass('active');
+		  		$('nav a[href*="#'+this.element.id+'"]', header).removeClass('active');
 		  	}else{
-		  		$('nav a[href="/#'+this.element.id+'"]', header).addClass('active');
+		  		$('nav a[href*="#'+this.element.id+'"]', header).addClass('active');
 		  	}
 		  },
 		  offset: '25%'

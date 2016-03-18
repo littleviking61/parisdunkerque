@@ -5,12 +5,12 @@
 
 /* VGT */
 
-$bg : url(../img/bg-vgt.png);
-$damier : url(../img/damier-vgt.png);
-$primary: #9CB21B; //vgt
-$logo-height: rem-calc(180);
-$logo-left: - rem-calc(165);
-$logo-top: - rem-calc(20);
+// $bg : url(../img/bg-vgt.png);
+// $damier : url(../img/damier-vgt.png);
+// $primary: #9CB21B; //vgt
+// $logo-height: rem-calc(180);
+// $logo-left: - rem-calc(165);
+// $logo-top: - rem-calc(20);
 
 /* PDK */
 
@@ -20,6 +20,15 @@ $logo-top: - rem-calc(20);
 // $logo-height: rem-calc(140);
 // $logo-left: - rem-calc(150);
 // $logo-top: rem-calc(10);
+
+/* CMT */
+
+$bg : url(../img/bg-cmt.png);
+$damier : url(../img/damier-cmt.png);
+$primary: #F07E3B;
+$logo-height: rem-calc(180);
+$logo-left: - rem-calc(155);
+$logo-top: - rem-calc(10);
 
 /**
  * Typography

@@ -3,7 +3,7 @@
 
 				<!-- copyright -->
 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> - <a href="//wordpress.org" title="WordPress">WordPress</a> - Design by <a href="//laventurierviking.frm" title="L'aventurier viking">L'aventurier viking</a>.
+					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> - <a href="//wordpress.org" title="WordPress">WordPress</a> - <?= __('Design by', 'html5blank') ?> <a href="//laventurierviking.frm" title="L'aventurier viking">L'aventurier viking</a>.
 				</p>
 				<!-- /copyright -->
 
