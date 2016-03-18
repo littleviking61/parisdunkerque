@@ -44,8 +44,8 @@
 					<!-- logo -->
 					<a href="<?= home_url(); ?>" class="logo">
 						<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-						<img src="<?= get_template_directory_uri(); ?>/img/logo-cmt.png" alt="Logo" class="logo-img">
-						<img src="<?= get_template_directory_uri(); ?>/img/banner-cmt.svg" alt="description" class="logo-description">
+						<img src="<?= get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+						<img src="<?= get_template_directory_uri(); ?>/img/banner.svg" alt="description" class="logo-description">
 					</a>
 					<!-- /logo -->
 					<div class="sidebar-widget">
